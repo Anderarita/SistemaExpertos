@@ -8,6 +8,8 @@ export default function RutinasPage() {
   const [error, setError] = useState('');
   const [cargando, setCargando] = useState(false);
 
+  const apiurl = import.meta.env.VITE_API_URL 
+
   // Función para clasificar el IMC
   const clasificarIMC = (valor) => {
     const num = parseFloat(valor);
@@ -32,7 +34,7 @@ export default function RutinasPage() {
 
     setCargando(true);
     try {
-      const res = await fetch('https://dd2a-190-92-2-90.ngrok-free.app/rutina', {
+      const res = await fetch(`${apiurl}/rutina`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ plan, imc: categoria, objetivo }),
