@@ -189,7 +189,7 @@ const MapPage = () => {
           <MapContainer
             center={[14.7718, -88.7794]}
             zoom={15}
-            style={{ width: "100%", height: "150%" }}
+            style={{ width: "100%", height: "100%" }}
             scrollWheelZoom={false}
           >
             <TileLayer
