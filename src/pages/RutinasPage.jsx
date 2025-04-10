@@ -61,7 +61,7 @@ export default function RutinasPage() {
   return (
     <div className="pt-32 px-4 max-w-md mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-center">Obtener Rutina</h2>
-
+      <label className="block mb-1 font-medium">Selecciona tu plan</label>
       <select
         value={plan}
         onChange={e => setPlan(e.target.value)}
@@ -71,7 +71,7 @@ export default function RutinasPage() {
         <option value="intermedio">Intermedio</option>
         <option value="avanzado">Avanzado</option>
       </select>
-
+      <label className="block mb-1 font-medium">Selecciona tu Objetivo</label>
       <select
         value={objetivo}
         onChange={e => setObjetivo(e.target.value)}
@@ -82,7 +82,7 @@ export default function RutinasPage() {
         <option value="mejorar_resistencia">Mejorar resistencia</option>
         <option value="aumentar_flexibilidad">Aumentar flexibilidad</option>
       </select>
-
+      <label className="block mb-1 font-medium">Ingresa tu IMC</label>
       <input
         type="number"
         step="0.1"
